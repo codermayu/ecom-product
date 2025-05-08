@@ -4,6 +4,7 @@ import com.example.productcatalogservice.dtos.ProductDTO;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("v1/products")
 public class ProductController {
 
     @GetMapping("/getProductDetails/{id}")
