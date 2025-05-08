@@ -1,4 +1,4 @@
-package models;
+package com.example.productcatalogservice.models;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -12,5 +12,6 @@ public class Product extends BaseModel{
     private double price;
     private Category category;
     private String imageUrl;
+    private boolean isPrimeEligible;
 
 }
