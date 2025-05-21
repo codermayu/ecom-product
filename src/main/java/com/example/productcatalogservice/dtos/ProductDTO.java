@@ -12,6 +12,6 @@ public class ProductDTO extends BaseModel {
     private String description;
     private String name;
     private double price;
-    private Category category;
-    private String imageUrl;
+    private String category;
+    private String image;
 }

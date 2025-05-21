@@ -9,11 +9,11 @@ import java.util.Date;
 @Setter
 public class BaseModel {
 
-    private int id;
+    private long id;
 
-    private Date createdAt;
-
-    private Date updatedAt;
-
-    private State state;
+//    private Date createdAt;
+//
+//    private Date updatedAt;
+//
+//    private State state;
 }
