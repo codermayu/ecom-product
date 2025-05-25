@@ -1,8 +1,9 @@
-package com.example.productcatalogservice.services;
+package com.example.productcatalogservice.services.Impl;
 
 import com.example.productcatalogservice.dtos.ProductDTO;
 import com.example.productcatalogservice.exceptions.ProductNotFoundException;
 import com.example.productcatalogservice.models.Product;
+import com.example.productcatalogservice.services.ProductService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;

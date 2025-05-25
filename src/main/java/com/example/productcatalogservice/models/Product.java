@@ -17,7 +17,7 @@ public class Product extends BaseModel{
     private String name;
     private double price;
     @ManyToOne
-    @JsonManagedReference // to avoid cyclic calls
+    @JsonBackReference // should be added in child side, will ignore this reference when called via product controller
     private Category category;
     private String imageUrl;
     private boolean isPrimeEligible;

@@ -1,10 +1,11 @@
-package com.example.productcatalogservice.services;
+package com.example.productcatalogservice.services.Impl;
 
 import com.example.productcatalogservice.dtos.ProductDTO;
 import com.example.productcatalogservice.exceptions.ProductNotFoundException;
 import com.example.productcatalogservice.models.Product;
 import com.example.productcatalogservice.repositories.CategoryRepository;
 import com.example.productcatalogservice.repositories.ProductRepository;
+import com.example.productcatalogservice.services.ProductService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -50,8 +51,12 @@ public class DBProductService implements ProductService {
     public void updateProduct(long productId, ProductDTO productDTO) throws ProductNotFoundException {
        Product product = productRepository.findById(productId).orElseThrow(()-> new ProductNotFoundException(productId,
                 "product not found"));
-        productRepository.delete(product);
-        productRepository.save(changeToProduct(productDTO));
+       try {
+           productRepository.delete(product);
+           productRepository.save(changeToProduct(productDTO));
+       }catch (Exception e){
+           throw new RuntimeException("issue while updating product: " + e.getMessage());
+       }
 
     }
 
@@ -59,7 +64,7 @@ public class DBProductService implements ProductService {
     public void deleteProduct(long productId) throws ProductNotFoundException {
         Product product = productRepository.findById(productId).orElseThrow(()-> new ProductNotFoundException(productId,
                 "product not found"));
-        productRepository.deleteById(productId);
+        productRepository.delete(product);
 
     }
 

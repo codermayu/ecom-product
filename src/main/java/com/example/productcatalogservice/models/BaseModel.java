@@ -20,5 +20,5 @@ public class BaseModel {
 //
 //    private Date updatedAt;
 //
-//    private State state;
+    private State state;
 }

@@ -20,7 +20,7 @@ public class Category extends BaseModel{
     private String name;
     private String description;
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
-    @JsonBackReference // will ignore this reference when called via category controller
+    @JsonManagedReference // to avoid cyclic calls , should be added to parent side
     private List<Product> products;
 
 }
