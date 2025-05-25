@@ -32,7 +32,6 @@ public class DBProductService implements ProductService {
 //                    "description": "rayban sunglass"
 //        }
 //        }
-        categoryRepository.save(productDTO.getCategory());
         return productRepository.save(changeToProduct(productDTO));
     }
 

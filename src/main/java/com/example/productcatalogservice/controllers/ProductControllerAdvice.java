@@ -17,7 +17,7 @@ public class ProductControllerAdvice {
 
     @ExceptionHandler(CategoryNotFoundException.class)
     ResponseEntity<String> getCategoryNotFoundException(CategoryNotFoundException e) {
-        return new ResponseEntity<>("Category not found: " + e.getMessage(), HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>("Category not found: " + e.getCategoryId(), HttpStatus.NOT_FOUND);
     }
 
 

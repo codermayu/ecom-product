@@ -20,6 +20,5 @@ public class Product extends BaseModel{
     @JsonBackReference // should be added in child side, will ignore this reference when called via product controller
     private Category category;
     private String imageUrl;
-    private boolean isPrimeEligible;
 
 }

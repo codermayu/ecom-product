@@ -22,13 +22,9 @@ public class ProductController {
     }
 
     @GetMapping("/getProductDetail/{id}")
-    public ResponseEntity<Product> getProductDetails(@PathVariable("id") long productId) {
-        try {
+    public ResponseEntity<Product> getProductDetails(@PathVariable("id") long productId) throws ProductNotFoundException {
             Product product = productService.getProduct(productId);
             return new ResponseEntity<>(product, HttpStatus.OK);
-        } catch (ProductNotFoundException e) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
     }
 
     @GetMapping("/getAllProductDetails")
