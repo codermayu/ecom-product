@@ -18,4 +18,6 @@ public interface ProductService {
 
     void deleteProduct(long productId) throws ProductNotFoundException;
 
+    Product modifyProduct(long productId, ProductDTO productDTO) throws ProductNotFoundException;
+
 }

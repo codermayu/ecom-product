@@ -54,5 +54,12 @@ public class ProductController {
 
     }
 
+    @PatchMapping("/modifyProduct/{id}")
+    public ResponseEntity<Product> modifyProduct(@PathVariable("id") long productId,
+                                                @RequestBody ProductDTO productDTO)
+            throws ProductNotFoundException {
+        return new ResponseEntity<>(productService.modifyProduct(productId, productDTO), HttpStatus.OK);
+
+    }
 
 }

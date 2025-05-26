@@ -8,6 +8,7 @@ import com.example.productcatalogservice.repositories.ProductRepository;
 import com.example.productcatalogservice.services.ProductService;
 import org.springframework.stereotype.Service;
 
+import java.awt.color.ProfileDataException;
 import java.util.List;
 
 @Service("DBService")
@@ -67,13 +68,37 @@ public class DBProductService implements ProductService {
 
     }
 
+    @Override
+    public Product modifyProduct(long productId, ProductDTO productDTO) throws ProductNotFoundException {
+        Product product = productRepository.findById(productId).orElseThrow(()-> new ProductNotFoundException(
+                productId, "product not found"));
+        Product updatedProduct  = updateProductFields(productDTO, product);
+        return productRepository.save(updatedProduct);
+    }
+
+   private Product updateProductFields(ProductDTO updatedProduct, Product originalProduct){
+       if(updatedProduct.getPrice() != 0.0){
+           originalProduct.setPrice(updatedProduct.getPrice());
+       }
+       if(updatedProduct.getName() != null){
+           originalProduct.setName(updatedProduct.getName());
+       }
+       if(updatedProduct.getDescription() != null){
+           originalProduct.setDescription(updatedProduct.getDescription());
+       }
+       if(updatedProduct.getImageUrl() != null){
+           originalProduct.setImageUrl(updatedProduct.getImageUrl());
+       }
+       return originalProduct;
+   }
+
     private Product changeToProduct(ProductDTO productDTO){
         Product product = new Product();
         product.setId(productDTO.getId());
         product.setName(productDTO.getName());
         product.setDescription(productDTO.getDescription());
         product.setPrice(productDTO.getPrice());
-        product.setImageUrl(productDTO.getImage());
+        product.setImageUrl(productDTO.getImageUrl());
         product.setCategory(productDTO.getCategory());
         return product;
     }
