@@ -6,12 +6,14 @@ import com.example.productcatalogservice.models.Product;
 import com.example.productcatalogservice.repositories.CategoryRepository;
 import com.example.productcatalogservice.repositories.ProductRepository;
 import com.example.productcatalogservice.services.ProductService;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.awt.color.ProfileDataException;
 import java.util.List;
 
 @Service("DBService")
+@Primary
 public class DBProductService implements ProductService {
     private final ProductRepository productRepository;
     private final CategoryRepository categoryRepository;
