@@ -35,7 +35,8 @@ public class DBProductService implements ProductService {
 //                    "description": "rayban sunglass"
 //        }
 //        }
-        return productRepository.save(changeToProduct(productDTO));
+        Product product = changeToProduct(productDTO);
+        return productRepository.save(product);
     }
 
     @Override
