@@ -2,6 +2,7 @@ package com.example.productcatalogservice.dtos;
 
 import com.example.productcatalogservice.models.BaseModel;
 import com.example.productcatalogservice.models.Category;
+import jakarta.annotation.Nullable;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,9 +10,14 @@ import lombok.Setter;
 @Setter
 public class ProductDTO extends BaseModel {
 
+    @Nullable
     private String description;
+    @Nullable
     private String name;
+    @Nullable
     private double price;
-    private String category;
-    private String image;
+    @Nullable
+    private Category category;
+    @Nullable
+    private String imageUrl;
 }

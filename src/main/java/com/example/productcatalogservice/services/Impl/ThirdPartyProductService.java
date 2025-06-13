@@ -1,8 +1,9 @@
-package com.example.productcatalogservice.services;
+package com.example.productcatalogservice.services.Impl;
 
 import com.example.productcatalogservice.dtos.ProductDTO;
 import com.example.productcatalogservice.exceptions.ProductNotFoundException;
 import com.example.productcatalogservice.models.Product;
+import com.example.productcatalogservice.services.ProductService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -64,13 +65,18 @@ public class ThirdPartyProductService implements ProductService {
         restTemplate.delete(url, productId);
     }
 
+    @Override
+    public Product modifyProduct(long productId, ProductDTO productDTO) throws ProductNotFoundException {
+        return null;
+    }
+
     private Product changeToProduct(ProductDTO productDTO){
         Product product = new Product();
         product.setId(productDTO.getId());
         product.setName(productDTO.getName());
         product.setDescription(productDTO.getDescription());
         product.setPrice(productDTO.getPrice());
-        product.setImageUrl(productDTO.getImage());
+        product.setImageUrl(productDTO.getImageUrl());
         product.setCategory(productDTO.getCategory());
         return product;
     }

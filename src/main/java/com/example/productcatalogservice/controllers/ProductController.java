@@ -17,18 +17,14 @@ public class ProductController {
 
     private ProductService productService;
 
-    public ProductController(@Qualifier("ThirdPartyService") ProductService productService) {
+    public ProductController(ProductService productService) {
         this.productService = productService;
     }
 
     @GetMapping("/getProductDetail/{id}")
-    public ResponseEntity<Product> getProductDetails(@PathVariable("id") long productId) {
-        try {
+    public ResponseEntity<Product> getProductDetails(@PathVariable("id") long productId) throws ProductNotFoundException {
             Product product = productService.getProduct(productId);
             return new ResponseEntity<>(product, HttpStatus.OK);
-        } catch (ProductNotFoundException e) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
     }
 
     @GetMapping("/getAllProductDetails")
@@ -58,5 +54,12 @@ public class ProductController {
 
     }
 
+    @PatchMapping("/modifyProduct/{id}")
+    public ResponseEntity<Product> modifyProduct(@PathVariable("id") long productId,
+                                                @RequestBody ProductDTO productDTO)
+            throws ProductNotFoundException {
+        return new ResponseEntity<>(productService.modifyProduct(productId, productDTO), HttpStatus.OK);
+
+    }
 
 }
