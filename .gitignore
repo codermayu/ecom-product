@@ -3,6 +3,7 @@
  *.class
  # Ignore IntelliJ IDEA project files
  *.iml
+ *.xml
     # Ignore Eclipse project files
     .project
     .classpath

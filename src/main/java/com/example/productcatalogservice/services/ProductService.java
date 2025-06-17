@@ -20,4 +20,6 @@ public interface ProductService {
 
     Product modifyProduct(long productId, ProductDTO productDTO) throws ProductNotFoundException;
 
+    Product changeToProduct(ProductDTO productDTO);
+
 }

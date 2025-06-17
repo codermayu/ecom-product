@@ -5,9 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f043fdc1-bf50-4c8a-b5a0-56ab07edbc3b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ecom-product.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/services/Impl/DBProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/services/Impl/DBProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/services/Impl/ThirdPartyProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/services/Impl/ThirdPartyProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/services/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/productcatalogservice/services/Impl/DBProductServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/productcatalogservice/services/Impl/DBProductServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,12 +56,27 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.DBProductServiceTest.executor": "Run",
+    "JUnit.DBProductServiceTest.testAddProduct.executor": "Run",
+    "JUnit.DBProductServiceTest.testDeleteProduct.executor": "Run",
+    "JUnit.DBProductServiceTest.testGetProduct.executor": "Run",
+    "JUnit.DBProductServiceTest.testUpdateProduct.executor": "Run",
+    "Maven.ProductCatalogService [clean].executor": "Run",
+    "Maven.ProductCatalogService [compile].executor": "Run",
+    "Maven.ProductCatalogService [install].executor": "Run",
+    "Maven.ProductCatalogService [package].executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.ProductCatalogServiceApplication.executor": "Run",
     "git-widget-placeholder": "product",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -64,9 +88,93 @@
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "MavenSettings",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.DBProductServiceTest.testDeleteProduct">
+    <configuration name="DBProductServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProductCatalogService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.productcatalogservice.services.Impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.productcatalogservice.services.Impl" />
+      <option name="MAIN_CLASS_NAME" value="com.example.productcatalogservice.services.Impl.DBProductServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DBProductServiceTest.testAddProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProductCatalogService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.productcatalogservice.services.Impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.productcatalogservice.services.Impl" />
+      <option name="MAIN_CLASS_NAME" value="com.example.productcatalogservice.services.Impl.DBProductServiceTest" />
+      <option name="METHOD_NAME" value="testAddProduct" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DBProductServiceTest.testDeleteProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProductCatalogService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.productcatalogservice.services.Impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.productcatalogservice.services.Impl" />
+      <option name="MAIN_CLASS_NAME" value="com.example.productcatalogservice.services.Impl.DBProductServiceTest" />
+      <option name="METHOD_NAME" value="testDeleteProduct" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DBProductServiceTest.testGetProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProductCatalogService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.productcatalogservice.services.Impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.productcatalogservice.services.Impl" />
+      <option name="MAIN_CLASS_NAME" value="com.example.productcatalogservice.services.Impl.DBProductServiceTest" />
+      <option name="METHOD_NAME" value="testGetProduct" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DBProductServiceTest.testUpdateProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProductCatalogService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.productcatalogservice.services.Impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.productcatalogservice.services.Impl" />
+      <option name="MAIN_CLASS_NAME" value="com.example.productcatalogservice.services.Impl.DBProductServiceTest" />
+      <option name="METHOD_NAME" value="testUpdateProduct" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProductCatalogServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="ProductCatalogService" />
@@ -75,6 +183,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.DBProductServiceTest.testDeleteProduct" />
+        <item itemvalue="JUnit.DBProductServiceTest.testUpdateProduct" />
+        <item itemvalue="JUnit.DBProductServiceTest.testGetProduct" />
+        <item itemvalue="JUnit.DBProductServiceTest.testAddProduct" />
+        <item itemvalue="JUnit.DBProductServiceTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -99,10 +216,29 @@
       <workItem from="1749990218817" duration="84000" />
       <workItem from="1749990341478" duration="11000" />
       <workItem from="1749990359071" duration="262000" />
+      <workItem from="1750010360298" duration="2226000" />
+      <workItem from="1750088733659" duration="9073000" />
+      <workItem from="1750182224937" duration="2798000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/services/Impl/DBProductService.java</url>
+          <line>103</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/services/Impl/DBProductService.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -95,7 +95,7 @@ public class DBProductService implements ProductService {
        return originalProduct;
    }
 
-    private Product changeToProduct(ProductDTO productDTO){
+    public Product changeToProduct(ProductDTO productDTO){
         Product product = new Product();
         product.setId(productDTO.getId());
         product.setName(productDTO.getName());

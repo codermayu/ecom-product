@@ -69,8 +69,8 @@ public class ThirdPartyProductService implements ProductService {
     public Product modifyProduct(long productId, ProductDTO productDTO) throws ProductNotFoundException {
         return null;
     }
-
-    private Product changeToProduct(ProductDTO productDTO){
+    @Override
+    public Product changeToProduct(ProductDTO productDTO){
         Product product = new Product();
         product.setId(productDTO.getId());
         product.setName(productDTO.getName());
