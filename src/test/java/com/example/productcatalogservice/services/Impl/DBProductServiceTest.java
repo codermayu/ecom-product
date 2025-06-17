@@ -5,7 +5,6 @@ import com.example.productcatalogservice.exceptions.ProductNotFoundException;
 import com.example.productcatalogservice.models.Category;
 import com.example.productcatalogservice.models.Product;
 import com.example.productcatalogservice.repositories.ProductRepository;
-import com.example.productcatalogservice.services.ProductService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
