@@ -1,0 +1,35 @@
+ # Ignore build output
+ /target/
+ *.class
+ # Ignore IntelliJ IDEA project files
+ *.iml
+    # Ignore Eclipse project files
+    .project
+    .classpath
+# Ignore Maven files
+    *.log
+    *.jar
+    *.war
+    *.ear
+    # Ignore Gradle files
+    .gradle/
+    build/
+    # Ignore OS generated files
+    .DS_Store
+    Thumbs.db
+    # Ignore IDE specific files
+    .idea/
+    .vscode/
+    # Ignore temporary files
+    *~
+    *.tmp
+    *.bak
+    # Ignore coverage reports
+    coverage/
+    .nyc_output/
+    # Ignore dependency directories
+    node_modules/
+    vendor/
+    # Ignore log files
+    logs/
+    *.log
