@@ -1,19 +1,16 @@
 package com.example.productcatalogservice.services.Impl;
 
-import com.example.productcatalogservice.dtos.ProductDTO;
 import com.example.productcatalogservice.exceptions.ProductNotFoundException;
 import com.example.productcatalogservice.models.Product;
 import com.example.productcatalogservice.repositories.CategoryRepository;
 import com.example.productcatalogservice.repositories.ProductRepository;
 import com.example.productcatalogservice.services.ProductService;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
-import java.awt.color.ProfileDataException;
 import java.util.List;
 
 @Service("DBService")
-@Primary
+//@Primary
 public class DBProductService implements ProductService {
     private final ProductRepository productRepository;
     private final CategoryRepository categoryRepository;
@@ -24,7 +21,7 @@ public class DBProductService implements ProductService {
     }
 
     @Override
-    public Product addProduct(ProductDTO productDTO) {
+    public Product addProduct(Product product) {
         //payload
 //        {
 //            "description": "it is sunglass",
@@ -35,7 +32,7 @@ public class DBProductService implements ProductService {
 //                    "description": "rayban sunglass"
 //        }
 //        }
-        Product product = changeToProduct(productDTO);
+//        Product product = changeToProduct(Product);
         return productRepository.save(product);
     }
 
@@ -51,12 +48,12 @@ public class DBProductService implements ProductService {
     }
 
     @Override
-    public void updateProduct(long productId, ProductDTO productDTO) throws ProductNotFoundException {
-       Product product = productRepository.findById(productId).orElseThrow(()-> new ProductNotFoundException(productId,
+    public void updateProduct(long productId, Product product) throws ProductNotFoundException {
+       Product dbproduct = productRepository.findById(productId).orElseThrow(()-> new ProductNotFoundException(productId,
                 "product not found"));
        try {
-           productRepository.delete(product);
-           productRepository.save(changeToProduct(productDTO));
+           productRepository.delete(dbproduct);
+           productRepository.save(product);
        }catch (Exception e){
            throw new RuntimeException("issue while updating product: " + e.getMessage());
        }
@@ -72,14 +69,14 @@ public class DBProductService implements ProductService {
     }
 
     @Override
-    public Product modifyProduct(long productId, ProductDTO productDTO) throws ProductNotFoundException {
-        Product product = productRepository.findById(productId).orElseThrow(()-> new ProductNotFoundException(
-                productId, "product not found"));
-        Product updatedProduct  = updateProductFields(productDTO, product);
-        return productRepository.save(updatedProduct);
+    public Product modifyProduct(long productId, Product product) throws ProductNotFoundException {
+//        Product product = productRepository.findById(productId).orElseThrow(()-> new ProductNotFoundException(
+//                productId, "product not found"));
+//        Product updatedProduct  = updateProductFields(roduct, product);
+        return productRepository.save(product);
     }
 
-   private Product updateProductFields(ProductDTO updatedProduct, Product originalProduct){
+   private Product updateProductFields(Product updatedProduct, Product originalProduct){
        if(updatedProduct.getPrice() != 0.0){
            originalProduct.setPrice(updatedProduct.getPrice());
        }
@@ -95,14 +92,5 @@ public class DBProductService implements ProductService {
        return originalProduct;
    }
 
-    public Product changeToProduct(ProductDTO productDTO){
-        Product product = new Product();
-        product.setId(productDTO.getId());
-        product.setName(productDTO.getName());
-        product.setDescription(productDTO.getDescription());
-        product.setPrice(productDTO.getPrice());
-        product.setImageUrl(productDTO.getImageUrl());
-        product.setCategory(productDTO.getCategory());
-        return product;
-    }
+
 }

@@ -1,16 +1,18 @@
 package com.example.productcatalogservice.models;
 
-import jakarta.persistence.*;
-import lombok.Generated;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.MappedSuperclass;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.Date;
+import java.io.Serializable;
 
 @MappedSuperclass
 @Getter
 @Setter
-public class BaseModel {
+public class BaseModel implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

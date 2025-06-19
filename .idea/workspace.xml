@@ -5,22 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f043fdc1-bf50-4c8a-b5a0-56ab07edbc3b" name="Changes" comment="add gitignore">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/configs/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/configs/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/controllers/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/dtos/ProductDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/dtos/ProductDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/models/BaseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/models/BaseModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/models/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/models/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/models/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/services/Impl/DBProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/services/Impl/DBProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/services/Impl/ThirdPartyProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/services/Impl/ThirdPartyProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/services/ProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/productcatalogservice/controllers/ProductControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/productcatalogservice/controllers/ProductControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/example/productcatalogservice/services/Impl/DBProductServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/productcatalogservice/services/Impl/DBProductServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProductCatalogService-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProductCatalogService-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProductCatalogService-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProductCatalogService-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.productcatalogservice.ProductCatalogServiceApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.productcatalogservice.ProductCatalogServiceApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.productcatalogservice.controllers.ProductControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.productcatalogservice.controllers.ProductControllerTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.productcatalogservice.services.Impl.DBProductServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.productcatalogservice.services.Impl.DBProductServiceTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.productcatalogservice.ProductCatalogServiceApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.productcatalogservice.ProductCatalogServiceApplicationTests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.productcatalogservice.controllers.ProductControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.productcatalogservice.controllers.ProductControllerTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.productcatalogservice.services.Impl.DBProductServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.productcatalogservice.services.Impl.DBProductServiceTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/productcatalogservice/configs/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/productcatalogservice/configs/AppConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/productcatalogservice/controllers/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/productcatalogservice/controllers/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/productcatalogservice/dtos/ProductDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/productcatalogservice/dtos/ProductDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/productcatalogservice/models/BaseModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/productcatalogservice/models/BaseModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/productcatalogservice/models/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/productcatalogservice/models/Category.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/productcatalogservice/models/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/productcatalogservice/models/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/productcatalogservice/services/Impl/DBProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/productcatalogservice/services/Impl/DBProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/productcatalogservice/services/Impl/ThirdPartyProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/productcatalogservice/services/Impl/ThirdPartyProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/productcatalogservice/services/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/productcatalogservice/services/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/productcatalogservice/controllers/ProductControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/productcatalogservice/controllers/ProductControllerTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/productcatalogservice/services/Impl/DBProductServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/productcatalogservice/services/Impl/DBProductServiceTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,6 +39,13 @@
   </component>
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -240,7 +256,8 @@
       <workItem from="1750010360298" duration="2226000" />
       <workItem from="1750088733659" duration="9073000" />
       <workItem from="1750182224937" duration="6262000" />
-      <workItem from="1750192675368" duration="1971000" />
+      <workItem from="1750192675368" duration="3352000" />
+      <workItem from="1750266981146" duration="7609000" />
     </task>
     <servers />
   </component>
@@ -250,17 +267,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add gitignore" />
     <option name="LAST_COMMIT_MESSAGE" value="add gitignore" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/services/Impl/DBProductService.java</url>
-          <line>103</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

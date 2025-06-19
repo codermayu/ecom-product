@@ -1,6 +1,5 @@
 package com.example.productcatalogservice.services.Impl;
 
-import com.example.productcatalogservice.dtos.ProductDTO;
 import com.example.productcatalogservice.exceptions.ProductNotFoundException;
 import com.example.productcatalogservice.models.Category;
 import com.example.productcatalogservice.models.Product;
@@ -29,14 +28,14 @@ class DBProductServiceTest {
     @Test
     public void testAddProduct() {
         // Arrange
-        ProductDTO productDTO = new ProductDTO();
-        productDTO.setName("rayban");
-        productDTO.setDescription("it is sunglass");
-        productDTO.setPrice(22);
+//        ProductDTO productDTO = new ProductDTO();
+//        productDTO.setName("rayban");
+//        productDTO.setDescription("it is sunglass");
+//        productDTO.setPrice(22);
         Category category = new Category();
         category.setName("sunglass");
         category.setDescription("rayban sunglass");
-        productDTO.setCategory(category);
+//        productDTO.setCategory(category);
 
         Product product = new Product();
         product.setName("rayban");
@@ -47,7 +46,7 @@ class DBProductServiceTest {
         when(productRepository.save(any(Product.class))).thenReturn(product);
 
         // Act
-        Product result = dbProductService.addProduct(productDTO);
+        Product result = dbProductService.addProduct(product);
 
         // Assert
         assertNotNull(result);
@@ -81,14 +80,14 @@ class DBProductServiceTest {
 
     @Test
     public void testUpdateProduct() throws ProductNotFoundException {
-        ProductDTO productDTO = new ProductDTO();
-        productDTO.setName("rayban");
-        productDTO.setDescription("it is sunglass");
-        productDTO.setPrice(22);
+//        ProductDTO productDTO = new ProductDTO();
+//        productDTO.setName("rayban");
+//        productDTO.setDescription("it is sunglass");
+//        productDTO.setPrice(22);
         Category category = new Category();
         category.setName("sunglass");
         category.setDescription("rayban sunglass");
-        productDTO.setCategory(category);
+//        productDTO.setCategory(category);
 
         Product product = new Product();
         product.setName("rayban");
@@ -98,7 +97,7 @@ class DBProductServiceTest {
 
         when(productRepository.findById(any())).thenReturn(Optional.of(product));
         when(productRepository.save(any(Product.class))).thenReturn(product);
-        dbProductService.updateProduct(1L, productDTO);
+        dbProductService.updateProduct(1L, product);
         Product updatedProduct = dbProductService.getProduct(1L);
         assertNotNull(updatedProduct);
         assertEquals("rayban", updatedProduct.getName());

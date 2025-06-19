@@ -2,8 +2,11 @@ package com.example.productcatalogservice.services.Impl;
 
 import com.example.productcatalogservice.dtos.ProductDTO;
 import com.example.productcatalogservice.exceptions.ProductNotFoundException;
+import com.example.productcatalogservice.models.Category;
 import com.example.productcatalogservice.models.Product;
 import com.example.productcatalogservice.services.ProductService;
+import org.springframework.context.annotation.Primary;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -12,20 +15,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service("ThirdPartyService")
+@Primary
 public class ThirdPartyProductService implements ProductService {
 
 
     private final RestTemplate restTemplate;
+    private RedisTemplate<String, Object> redisTemplate;
 
-    public ThirdPartyProductService(RestTemplate restTemplate) {
+    public ThirdPartyProductService(RestTemplate restTemplate, RedisTemplate<String, Object> redisTemplate) {
         this.restTemplate = restTemplate;
+        this.redisTemplate = redisTemplate;
     }
 
     String BASE_URL = "https://fakestoreapi.com";
 
     @Override
-    public Product addProduct(ProductDTO productDto) {
+    public Product addProduct(Product product) {
         String url = BASE_URL + "/products";
+        ProductDTO productDto = changeToProductDTO(product);
         ResponseEntity<ProductDTO> productDTO = restTemplate.postForEntity(url, productDto, ProductDTO.class);
         return changeToProduct(productDTO.getBody());
     }
@@ -33,12 +40,22 @@ public class ThirdPartyProductService implements ProductService {
     @Override
     public Product getProduct(long productId) throws ProductNotFoundException {
         String url = BASE_URL + "/products/" + productId;
-
+        // Check if product is in Redis cache
+       Product product = (Product) redisTemplate.opsForHash().get("PRODUCTS", "PRODUCT_" + productId);
+        if (product != null) {
+            return product;
+        }
+        // If not in cache, fetch from third-party API
         ProductDTO productDTO = restTemplate.getForObject(url, ProductDTO.class, productId);
         if (productDTO == null) {
             throw new ProductNotFoundException(productId, "product not present");
         }
-        return changeToProduct(productDTO);
+
+         product = changeToProduct(productDTO);
+        redisTemplate.opsForHash().put("PRODUCTS", "PRODUCT_" + productId, product);
+
+        return  product;
+
     }
 
     @Override
@@ -54,7 +71,7 @@ public class ThirdPartyProductService implements ProductService {
     }
 
     @Override
-    public void updateProduct(long productId, ProductDTO productDTO) throws ProductNotFoundException {
+    public void updateProduct(long productId, Product product) throws ProductNotFoundException {
         String url = BASE_URL + "/products/" + productId;
         restTemplate.put(url, ProductDTO.class, productId);
     }
@@ -66,10 +83,10 @@ public class ThirdPartyProductService implements ProductService {
     }
 
     @Override
-    public Product modifyProduct(long productId, ProductDTO productDTO) throws ProductNotFoundException {
+    public Product modifyProduct(long productId, Product product) throws ProductNotFoundException {
         return null;
     }
-    @Override
+
     public Product changeToProduct(ProductDTO productDTO){
         Product product = new Product();
         product.setId(productDTO.getId());
@@ -77,7 +94,22 @@ public class ThirdPartyProductService implements ProductService {
         product.setDescription(productDTO.getDescription());
         product.setPrice(productDTO.getPrice());
         product.setImageUrl(productDTO.getImageUrl());
-        product.setCategory(productDTO.getCategory());
+        Category category = new Category();
+        category.setName(productDTO.getCategory());
+        product.setCategory(category);
         return product;
+    }
+
+    public ProductDTO changeToProductDTO(Product product){
+        ProductDTO productDTO = new ProductDTO();
+        productDTO.setId(product.getId());
+        productDTO.setName(product.getName());
+        productDTO.setDescription(product.getDescription());
+        productDTO.setPrice(product.getPrice());
+        productDTO.setImageUrl(product.getImageUrl());
+        if (product.getCategory() != null) {
+            productDTO.setCategory(product.getCategory().getName());
+        }
+        return productDTO;
     }
 }

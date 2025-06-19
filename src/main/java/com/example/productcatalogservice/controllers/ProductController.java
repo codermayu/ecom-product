@@ -1,10 +1,8 @@
 package com.example.productcatalogservice.controllers;
 
-import com.example.productcatalogservice.dtos.ProductDTO;
 import com.example.productcatalogservice.exceptions.ProductNotFoundException;
 import com.example.productcatalogservice.models.Product;
 import com.example.productcatalogservice.services.ProductService;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -33,8 +31,8 @@ public class ProductController {
     }
 
     @PostMapping("/addProduct")
-    public ResponseEntity<Product> addProduct(@RequestBody ProductDTO productDTO) {
-        return new ResponseEntity<>(productService.addProduct(productDTO), HttpStatus.CREATED);
+    public ResponseEntity<Product> addProduct(@RequestBody Product product) {
+        return new ResponseEntity<>(productService.addProduct(product), HttpStatus.CREATED);
 
     }
 
@@ -47,18 +45,18 @@ public class ProductController {
 
     @PutMapping("/updateProduct/{id}")
     public ResponseEntity<String> updateProduct(@PathVariable("id") long productId,
-                                                 @RequestBody ProductDTO productDTO)
+                                                 @RequestBody Product product)
             throws ProductNotFoundException {
-        productService.updateProduct(productId, productDTO);
+        productService.updateProduct(productId, product);
         return new ResponseEntity<>("product updated", HttpStatus.OK);
 
     }
 
     @PatchMapping("/modifyProduct/{id}")
     public ResponseEntity<Product> modifyProduct(@PathVariable("id") long productId,
-                                                @RequestBody ProductDTO productDTO)
+                                                @RequestBody Product product)
             throws ProductNotFoundException {
-        return new ResponseEntity<>(productService.modifyProduct(productId, productDTO), HttpStatus.OK);
+        return new ResponseEntity<>(productService.modifyProduct(productId, product), HttpStatus.OK);
 
     }
 

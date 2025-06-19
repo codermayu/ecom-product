@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
 @SpringBootTest
@@ -120,8 +121,8 @@ class ProductControllerTest {
         productDTO.setPrice(2000);
 
 
-        when(productService.addProduct(productDTO)).thenReturn(product);
-        Product actualProduct = productController.addProduct(productDTO).getBody();
+        when(productService.addProduct(any(Product.class))).thenReturn(product);
+        Product actualProduct = productController.addProduct(product).getBody();
         assertEquals(product, actualProduct);
     }
 
@@ -141,8 +142,8 @@ class ProductControllerTest {
        productDTO.setPrice(2000);
 
 
-       when(productService.modifyProduct(productId, productDTO)).thenReturn(product);
-       Product actualProduct = productController.modifyProduct(productId, productDTO).getBody();
+       when(productService.modifyProduct(productId, product)).thenReturn(product);
+       Product actualProduct = productController.modifyProduct(productId, product).getBody();
        assertEquals(product, actualProduct);
    }
 
