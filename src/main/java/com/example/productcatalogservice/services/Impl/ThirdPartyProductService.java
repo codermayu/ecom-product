@@ -5,7 +5,7 @@ import com.example.productcatalogservice.exceptions.ProductNotFoundException;
 import com.example.productcatalogservice.models.Category;
 import com.example.productcatalogservice.models.Product;
 import com.example.productcatalogservice.services.ProductService;
-import org.springframework.context.annotation.Primary;
+import org.springframework.data.domain.Page;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service("ThirdPartyService")
-@Primary
+//@Primary
 public class ThirdPartyProductService implements ProductService {
 
 
@@ -84,6 +84,11 @@ public class ThirdPartyProductService implements ProductService {
 
     @Override
     public Product modifyProduct(long productId, Product product) throws ProductNotFoundException {
+        return null;
+    }
+
+    @Override
+    public Page<Product> getProductByName(String title, int pageNumber, int pageSize) {
         return null;
     }
 

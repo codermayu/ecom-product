@@ -6,31 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="f043fdc1-bf50-4c8a-b5a0-56ab07edbc3b" name="Changes" comment="add gitignore">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/configs/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/configs/AppConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/controllers/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/dtos/ProductDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/dtos/ProductDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/models/BaseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/models/BaseModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/models/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/models/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/models/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/repositories/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/repositories/ProductRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/services/Impl/DBProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/services/Impl/DBProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/services/Impl/ThirdPartyProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/services/Impl/ThirdPartyProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/productcatalogservice/services/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/productcatalogservice/controllers/ProductControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/productcatalogservice/controllers/ProductControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/productcatalogservice/services/Impl/DBProductServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/productcatalogservice/services/Impl/DBProductServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/productcatalogservice/configs/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/productcatalogservice/configs/AppConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/productcatalogservice/controllers/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/productcatalogservice/controllers/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/productcatalogservice/dtos/ProductDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/productcatalogservice/dtos/ProductDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/productcatalogservice/models/BaseModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/productcatalogservice/models/BaseModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/productcatalogservice/models/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/productcatalogservice/models/Category.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/productcatalogservice/models/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/productcatalogservice/models/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/productcatalogservice/repositories/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/productcatalogservice/repositories/ProductRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/productcatalogservice/services/Impl/DBProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/productcatalogservice/services/Impl/DBProductService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/productcatalogservice/services/Impl/ThirdPartyProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/productcatalogservice/services/Impl/ThirdPartyProductService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/productcatalogservice/services/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/productcatalogservice/services/ProductService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/productcatalogservice/controllers/ProductControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/productcatalogservice/controllers/ProductControllerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/productcatalogservice/services/Impl/DBProductServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/productcatalogservice/services/Impl/DBProductServiceTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -257,7 +242,8 @@
       <workItem from="1750088733659" duration="9073000" />
       <workItem from="1750182224937" duration="6262000" />
       <workItem from="1750192675368" duration="3352000" />
-      <workItem from="1750266981146" duration="7609000" />
+      <workItem from="1750266981146" duration="8971000" />
+      <workItem from="1750417856881" duration="6766000" />
     </task>
     <servers />
   </component>

@@ -3,6 +3,7 @@ package com.example.productcatalogservice.controllers;
 import com.example.productcatalogservice.exceptions.ProductNotFoundException;
 import com.example.productcatalogservice.models.Product;
 import com.example.productcatalogservice.services.ProductService;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -28,6 +29,13 @@ public class ProductController {
     @GetMapping("/getAllProductDetails")
     public List<Product> getAllProducts() {
         return productService.getProducts();
+    }
+
+    //page is used to give details about page details --check in postman
+    @GetMapping("/searchProduct/{title}/page/{pageNumber}/size/{pageSize}")
+    public Page<Product> getProductsByName(@PathVariable("title") String name, @PathVariable("pageNumber")
+            int pageNumber, @PathVariable("pageSize") int pageSize) {
+        return productService.getProductByName(name, pageNumber, pageSize);
     }
 
     @PostMapping("/addProduct")
