@@ -5,7 +5,6 @@ import com.example.productcatalogservice.models.Product;
 import com.example.productcatalogservice.repositories.CategoryRepository;
 import com.example.productcatalogservice.repositories.ProductRepository;
 import com.example.productcatalogservice.services.ProductService;
-import org.springframework.context.annotation.Primary;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
@@ -14,7 +13,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service("DBService")
-@Primary
+//@Primary
 public class DBProductService implements ProductService {
     private final ProductRepository productRepository;
     private final CategoryRepository categoryRepository;
@@ -89,6 +88,11 @@ public class DBProductService implements ProductService {
                 PageRequest.of(pageNumber, pageSize, Sort.by(Sort.Direction.DESC, "Name").by
                         (Sort.Direction.ASC, "price")));
 
+    }
+
+    @Override
+    public String callUserServiceViaEureka(String token) {
+        return token;
     }
 
 

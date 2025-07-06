@@ -68,4 +68,10 @@ public class ProductController {
 
     }
 
+    @GetMapping("/callUserServiceViaEureka/{token}")
+    public String callUserServiceViaEureka(@PathVariable("token") String token){
+        return productService.callUserServiceViaEureka(token);
+
+    }
+
 }

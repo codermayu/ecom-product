@@ -22,6 +22,8 @@ public interface ProductService {
 
     Page<Product> getProductByName(String name, int pageNumber, int pageSize);
 
+    String callUserServiceViaEureka(String token);
+
 //    Product changeToProduct(ProductDTO productDTO);
 
 }
