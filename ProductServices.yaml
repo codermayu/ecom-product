@@ -1,0 +1,14 @@
+#need to give values as needed
+apiVersion: v1
+kind: Service
+metadata:
+  name: title
+spec:
+  selector:
+    app: title
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: NodePort
+  
